@@ -33,13 +33,13 @@ public interface ReservationService
      */
     Set<String> getAllClients();
 
-//    /*
-//     * Cancels reservation of seats for a client
-//     *
-//     * @param client - the name of the client
-//     * @param numbers - a list of seat numbers
-//     *
-//     * @return a list of all reserved seats by the client
-//     */
-//    List<Seat> cancelReservations(String client, List<String> numbers);
+    //    /*
+    //     * Cancels reservation of seats for a client
+    //     *
+    //     * @param client - the name of the client
+    //     * @param numbers - a list of seat numbers
+    //     *
+    //     * @return a list of all reserved seats by the client
+    //     */
+    //    List<Seat> cancelReservations(String client, List<String> numbers);
 }

@@ -47,13 +47,14 @@ class ReservationScenario2Test
     }
 
     private static void checkResults(
-        Supplier<ExecutorService> executorSupplier, Collection<Consumer<ReservationService>> tasks) throws InterruptedException
+        Supplier<ExecutorService> executorSupplier, Collection<Consumer<ReservationService>> tasks)
+        throws InterruptedException
     {
         final ExecutorService executor = executorSupplier.get();
         ReservationService reservationService = new ReservationServiceImpl(SeatGenerator.generateFreeSeats());
 
         List<Future<?>> futures = tasks.stream()
-                .map(task -> executor.submit(() -> task.accept(reservationService)))
+            .map(task -> executor.submit(() -> task.accept(reservationService)))
             .collect(toUnmodifiableList());
 
         executor.shutdown();
@@ -75,11 +76,11 @@ class ReservationScenario2Test
     private static Collection<Consumer<ReservationService>> generateTasks(int numberOfTasks)
     {
         return LongStream.range(0, numberOfTasks)
-                         .mapToObj(t -> {
-                             final String client = "client" + t;
-                             return reserve(Arrays.asList("A1", "M5", "Y5"), client);
-                         })
-                         .collect(toList());
+            .mapToObj(t -> {
+                final String client = "client" + t;
+                return reserve(Arrays.asList("A1", "M5", "Y5"), client);
+            })
+            .collect(toList());
     }
 
     private static Consumer<ReservationService> reserve(List<String> seats, String client)
