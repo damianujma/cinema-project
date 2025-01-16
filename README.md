@@ -9,7 +9,7 @@ There are some Junit 5 test cases. They can be executed from the IDE or from the
 ```shell
 mvn test
 ```
-We use latest LTS Java version (17). For your convenience we don't use any Java 17 specific features, so you could change it if needed (Java 11 is the baseline here).
+We use Java 17 version. For your convenience we don't use any Java 17 specific features, so you could change it if needed (Java 11 is the baseline here).
 Feel free to use any Java version (11 or above) which works for you. You can change the java version in the [pom.xml](./pom.xml) file by editing following line:
 ```xml
 <java.version>17</java.version>
