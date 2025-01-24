@@ -21,7 +21,7 @@ There are 3 tasks. They depend on each other so start with [Task 1](#Task-1) the
 ## Task 1
 In this task you are asked to implement 4 methods in the `com.acme.cinema.ReservationServiceImpl` class. The class has the following methods:
 
-- `reserveSeats` - Reserves seats for a given client. In the response, the method should return all reserved seats by the client. If the client tries to reserve a seat that is already reserved, the method should return an empty list.
+- `reserveSeats` - Reserves seats for a given client. In the response, the method should return all reserved seats by the client - including previous reservations. If the client has not managed to reserve any seat and has not had any previous reservations, the method should return an empty list.
 - `percentageOfFreeSeats` - Returns the integer percentage of free seats in the cinema hall. The percentage should be rounded to the nearest integer. 
 - `getReservedSeatsByClient`- Returns the list of reserved seats for a given client.
 - `getAllClients` - Returns the list of all clients who have reserved seats.
